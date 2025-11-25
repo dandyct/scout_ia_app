@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'theme/app_theme.dart';
 import 'screens/home_screen.dart';
 import 'screens/player_detail_screen.dart';
 import 'services/api_service.dart';
@@ -21,9 +23,8 @@ class ScoutApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Scout IA',
-        theme: ThemeData(
-          primarySwatch: Colors.green,
-        ),
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.light(),
         initialRoute: '/',
         routes: {
           '/': (_) => const HomeScreen(),
